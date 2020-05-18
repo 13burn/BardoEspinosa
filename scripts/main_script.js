@@ -105,7 +105,7 @@ $(document).ready(function(){
         $(".returner").text("Regresar");
         $("#translate").text("Translate");
       }
-
+      blink()
       writer(ln)
       $(".change").show(500);
 
@@ -121,6 +121,7 @@ $(document).ready(function(){
 
     $("#Gosocial").click(function (){
       console.log("alright");
+      blink();
     });
 
     $("#me").mouseenter(function(){
@@ -130,19 +131,26 @@ $(document).ready(function(){
     $("#Goabout").click(function(){
       $(".card-deck").hide(400);
       $("#main-about").show(400);
+      blink();
+
     });
     $("#Goprojects").click(function(){
       $(".card-deck").hide(400);
       $("#main-projects").show(400);
+      blink();
+
     });
     $("#Gosocial").click(function(){
       $(".card-deck").hide(400);
       $("#main-social").show(400);
+      blink();
+
     });
 
     $(".returner").click(function(){
       $(".notmain").hide(400);
       $(".card-deck").show(400);
+      blink();
     })
     blink();
 
