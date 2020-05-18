@@ -23,7 +23,7 @@ var data = {
       topper: "¡Bienvenidos a mi sitio, sin hackeos, por favor!",
       about: ["Acerca de mi","Justo ahora estoy en medio de la transición de amateur a profesional, he trabajado en un par de proyectos web por diversión, en el área de soporte técnico (a Internet) tengo alrededor de un año de experiencia con clientes en E. U. A.\n        <br><br>\n        Aprendí HTML en el bachillerato y a programar en la universidad, después de dejar la carrera de Ingeniería Mecatronica decidí solo programar por diversión, ahora, después de aprender mas sobre Flask(Python), HTML, CSS y JavaScript decidí que es hora de entrar al desarrollo web como profesional; Personalmente me considero un buen programador y ajedrecista decente, honesto, enfocado y auto-motivado.\n        <br><br>\n        En este momento estoy trabajando en un par de proyectos independientes, este sitio es solo la puerta de entrada a mis proyectos, siéntanse libres de revisar todo en mi GitHub o contactarme a mi correo electrónico.\n        <br><br>\n        ¡Tengan un buen día!"],
       projects: ["Proyectos", "No hay proyectos... Aún." ],
-      social: ["Presencia social.",'<p>Esta es mi pagina de <a href="https://github.com/13burn/">GitHub</a>.</p><br><p>Y este es mi perfil de <a href="https://www.linkedin.com/in/bardo-ary-espinosa-aguilar-a4349611b/">LinkedIn</a>.</p>'],
+      social: ["Redes sociales.",'<p>Esta es mi pagina de <a href="https://github.com/13burn/">GitHub</a>.</p><br><p>Y este es mi perfil de <a href="https://www.linkedin.com/in/bardo-ary-espinosa-aguilar-a4349611b/">LinkedIn</a>.</p>'],
 
       default: ["Sitio en construcción, si cree que esto es un error por favor contacte al autor.", null]
     }
@@ -33,27 +33,25 @@ var data = {
 
 //content writer function
 function writer(ln="sp"){
+  //write on cards
   $(".lead").text(data.lan[ln].topper);
   $(".about").text(data.lan[ln].menu[0]);
   $(".projects").text(data.lan[ln].menu[1]);
   $(".social").text(data.lan[ln].menu[2]);
-
+  //write on card content
   $("#aboutDes").text(data.lan[ln].demo[0]);
   $("#projectsDes").text(data.lan[ln].demo[1]);
   $("#socialDes").text(data.lan[ln].demo[2]);
+  //write on secondary cards
+  $("#about").text(data.lan[ln].about[0]);
+  console.log(data.lan[ln].about[0]);
+  $("#aboutcont").html(data.lan[ln].about[1]);
+  $("#projects").text(data.lan[ln].projects[0]);
+  $("#projectscont").html(data.lan[ln].projects[1]);
+  $("#social").text(data.lan[ln].social[0]);
+  $("#socialcont").html(data.lan[ln].social[1]);
 
-  $("#title").text(data.lan[ln].about[0]);
-  $("#content_in").html(data.lan[ln].about[1]);
 }
-
-$.wait = function(ms) {
-    var defer = $.Deferred();
-    setTimeout(function() { defer.resolve(); }, ms);
-    return defer;
-};
-
-
-
 
 $(document).ready(function(){
 
@@ -62,7 +60,10 @@ $(document).ready(function(){
 
     //first load
     writer(ln);
+    $("#translate").text("Translate");
+    $(".returner").text("Regresar");
 
+    //hiding secondary cards
     $(".notmain").hide()
 
     //content loading function
@@ -70,10 +71,13 @@ $(document).ready(function(){
       $(".change").hide();
       if (ln == "sp"){
         ln ="en";
+        $(".returner").text("Return");
+        $("#translate").text("Traducir");
       }else{
         ln ="sp";
+        $(".returner").text("Regresar");
+        $("#translate").text("Translate");
       }
-      //setTimeout(writer(ln),500);
 
       writer(ln)
       $(".change").show(500);
@@ -96,5 +100,22 @@ $(document).ready(function(){
       $(this).attr("src", "images/dd1.png");
     });
 
+    $("#Goabout").click(function(){
+      $(".card-deck").hide(400);
+      $("#main-about").show(400);
+    });
+    $("#Goprojects").click(function(){
+      $(".card-deck").hide(400);
+      $("#main-projects").show(400);
+    });
+    $("#Gosocial").click(function(){
+      $(".card-deck").hide(400);
+      $("#main-social").show(400);
+    });
+
+    $(".returner").click(function(){
+      $(".notmain").hide(400);
+      $(".card-deck").show(400);
+    })
 
 });
