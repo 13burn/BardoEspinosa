@@ -7,10 +7,10 @@ and change . text for .html
 var data = {
   lan: {
     en: {
-      menu:["Who am i?", "My projects", "Social media"],
-      demo:["You don't know? come and find out.", "Some things i'm working on.", "Basically, how to hire me."],
+      menu:["Who I am?", "My projects", "Social media"],
+      demo:["You don't know? come and find out.", "Some things I'm working on.", "Basically, how to hire me."],
       topper: "Welcome to my website, no hacking, please!",
-      about: ["About me","Right now i’m in the middle of a transition between amateur and professional, i’ve worked in a couple of web projects for fun, i have around a year of experience on (internet) tech support with american customers.\n      <br><br>\nI learned HTML in highschool and programming in college, after i dropped out mechatronics engineering i choose to only code for fun, now, after i learned more about Flask (Python), HTML, CSS and JavaScript i decided it was time to start web development as a professional; Personally i consider myself a good coder and a decent chess player, honest, focused and self-motivated.\n<br><br>\nAt this moment i’m working on a couple of independent projects, this site is just the front door to my projects, feel free to every line of code on mi GitHub or just to e-mail me.\n<br><br>\nHave a nice day!\n"],
+      about: ["About me","Right now I’m in the middle of a transition between amateur and professional, I've worked in a couple of web projects for fun, I have around a year of experience on (internet) tech support with american customers.\n      <br><br>\nI learned HTML in highschool and programming in college, after I dropped out mechatronics engineering I choose to only code for fun, now, after I learned more about Flask (Python), HTML, CSS and JavaScript I decided it was time to start web development as a professional; Personally I consider myself a good coder and a decent chess player, honest, focused and self-motivated.\n<br><br>\nAt this moment i’m working on a couple of independent projects, this site is just the front door to my projects, feel free to every line of code on mi GitHub or just to e-mail me.\n<br><br>\nHave a nice day!\n"],
       projects: ["Projects",
         "There are no projects...Yet."
       ],
@@ -89,7 +89,7 @@ $(document).ready(function(){
     writer(ln);
     $("#translate").text("Translate");
     $(".returner").text("Regresar");
-    
+
 
     //hiding secondary cards
     $(".notmain").hide()
