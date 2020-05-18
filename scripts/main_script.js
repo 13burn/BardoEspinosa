@@ -89,6 +89,7 @@ $(document).ready(function(){
     writer(ln);
     $("#translate").text("Translate");
     $(".returner").text("Regresar");
+    
 
     //hiding secondary cards
     $(".notmain").hide()
