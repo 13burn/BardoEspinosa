@@ -53,6 +53,33 @@ function writer(ln="sp"){
 
 }
 
+
+
+function blink(){
+  //turn n off
+  $("span").delay(2500).queue(function (next) {
+      $(this).css({"text-shadow":"0px 0px 0px ", "color":"black"});
+      next()
+    });
+    //turn n on
+  $("span").delay(150).queue(function (next) {
+      $(this).css({"text-shadow":"0px 0px 10px #0abdc6", "color":"#0abdc6"});
+      next()
+    });
+    //turn n off
+
+    $("span").delay(300).queue(function (next) {
+        $(this).css({"text-shadow":"0px 0px 0px ", "color":"black"});
+        next()
+      });
+      //turn n on
+
+      $("span").delay(600).queue(function (next) {
+          $(this).css({"text-shadow":"0px 0px 10px #0abdc6", "color":"#0abdc6"});
+          next()
+        });
+}
+
 $(document).ready(function(){
 
     //variables setup
@@ -117,5 +144,7 @@ $(document).ready(function(){
       $(".notmain").hide(400);
       $(".card-deck").show(400);
     })
+    blink();
+
 
 });

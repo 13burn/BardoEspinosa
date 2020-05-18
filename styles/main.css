@@ -10,7 +10,9 @@ body{
 }
 
 #myname{
+  font-family: 'neoneonregular';
   text-shadow:0px 0px 10px #0abdc6;
+
 }
 
 .card{
@@ -18,7 +20,7 @@ body{
   background-color: #133e7c;
   border-color: #ea00d9;
   box-shadow: 0px 0px 10px #ea00d9;
-  color: #6FC3DF;
+  color: #0abdc6;
   max-width: 90%;
   margin: auto;
 }
@@ -27,3 +29,11 @@ body{
   max-width: 90%;
   margin: auto;
 }
+
+ #credit{
+   margin-top: 100px;
+   position: sticky;
+   bottom: 0px;
+   width: 100%;
+   text-align: right;
+  }
