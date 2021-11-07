@@ -1,2 +1,2 @@
 # BardoEspinosa
-New personal website with some jquery and bootstrap, i hope you like it
+New personal website with some jquery and bootstrap, I hope you like it
