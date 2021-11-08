@@ -11,8 +11,8 @@ var data = {
       demo:["You don't know? come and find out.", "Some things I'm working on.", "Basically, how to hire me."],
       topper: "Welcome to my website, no hacking, please!",
       about: ["About me","Right now I’m in the middle of a transition between amateur and professional, I've worked in a couple of web projects for fun, I have around a year of experience on (internet) tech support with american customers.\n      <br><br>\nI learned HTML in highschool and programming in college, after I dropped out mechatronics engineering I choose to only code for fun, now, after I learned more about Flask (Python), HTML, CSS and JavaScript I decided it was time to start web development as a professional; Personally I consider myself a good coder and a decent chess player, honest, focused and self-motivated.\n<br><br>\nAt this moment i’m working on a couple of independent projects, this site is just the front door to my projects, feel free to every line of code on mi GitHub or just to e-mail me.\n<br><br>\nHave a nice day!\n"],
-      projects: ["Projects",
-        "There are no projects...Yet."
+      projects: ["<h3>Projects</h3>",
+        '<h5>React Native</h5> <a href="https://play.google.com/store/apps/details?id=io.madlion.tacofinder">Taco Finder</a><br/><a href="https://play.google.com/store/apps/details?id=com.madlion.quicklist">Quick List</a><br/>\n<h5>Python 3</h5> <a href="http://greeneslushy.com/">Greene Slushy</a>'
       ],
       social: ["Social presence",'<p>This is my <a href="https://github.com/13burn/">GitHub</a> page.</p><br><p>And this is my <a href="https://www.linkedin.com/in/bardo-ary-espinosa-aguilar-a4349611b/">LinkedIn</a> profile.</p>'],
       default: "Site under construction, if you think this is a mistake please contact the author"
@@ -22,8 +22,8 @@ var data = {
       demo:["¿No sabes? entra para averiguarlo.", "Algunas cosas en las que estoy trabajando.", "Basicamente, como contratarme."],
       topper: "¡Bienvenidos a mi sitio, sin hackeos, por favor!",
       about: ["Acerca de mi","Justo ahora estoy en medio de la transición de amateur a profesional, he trabajado en un par de proyectos web por diversión, en el área de soporte técnico (a Internet) tengo alrededor de un año de experiencia con clientes en E. U. A.\n        <br><br>\n        Aprendí HTML en el bachillerato y a programar en la universidad, después de dejar la carrera de Ingeniería Mecatronica decidí solo programar por diversión, ahora, después de aprender mas sobre Flask(Python), HTML, CSS y JavaScript decidí que es hora de entrar al desarrollo web como profesional; Personalmente me considero un buen programador y ajedrecista decente, honesto, enfocado y auto-motivado.\n        <br><br>\n        En este momento estoy trabajando en un par de proyectos independientes, este sitio es solo la puerta de entrada a mis proyectos, siéntanse libres de revisar todo en mi GitHub o contactarme a mi correo electrónico.\n        <br><br>\n        ¡Tengan un buen día!"],
-      projects: ["Proyectos", "No hay proyectos... Aún." ],
-      social: ["Redes sociales.",'<p>Esta es mi pagina de <a href="https://github.com/13burn/">GitHub</a>.</p><br><p>Y este es mi perfil de <a href="https://www.linkedin.com/in/bardo-ary-espinosa-aguilar-a4349611b/">LinkedIn</a>.</p>'],
+      projects: ["<h3>Proyectos</h3>", '<h5>React Native</h5><a href="https://play.google.com/store/apps/details?id=io.madlion.tacofinder" target="_blank">Taco Finder</a><br/><a href="https://play.google.com/store/apps/details?id=com.madlion.quicklist" target="_blank">Quick List</a><br/>\n<h5>Python 3</h5> <a href="http://greeneslushy.com/">Greene Slushy</a>' ],
+      social: ["Redes sociales.",'<p>Esta es mi pagina de <a href="https://github.com/13burn/" >GitHub</a>.</p><br><p>Y este es mi perfil de <a href="https://www.linkedin.com/in/bardo-ary-espinosa-aguilar-a4349611b/" target="_blank">LinkedIn</a>.</p>'],
 
       default: ["Sitio en construcción, si cree que esto es un error por favor contacte al autor.", null]
     }
@@ -46,7 +46,7 @@ function writer(ln="sp"){
   $("#about").text(data.lan[ln].about[0]);
   console.log(data.lan[ln].about[0]);
   $("#aboutcont").html(data.lan[ln].about[1]);
-  $("#projects").text(data.lan[ln].projects[0]);
+  $("#projects").html(data.lan[ln].projects[0]);
   $("#projectscont").html(data.lan[ln].projects[1]);
   $("#social").text(data.lan[ln].social[0]);
   $("#socialcont").html(data.lan[ln].social[1]);
